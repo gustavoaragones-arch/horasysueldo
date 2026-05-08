@@ -62,6 +62,10 @@ export default function CalculatorSection() {
         <div className="calculator-divider" />
         <ResultsPanel results={results} />
       </div>
+      <p className="calculator-trust-note">
+        Esta herramienta ofrece estimaciones rápidas para trabajadores en México.
+        Los resultados pueden variar según acuerdos laborales y tipo de empleo.
+      </p>
     </section>
   );
 }

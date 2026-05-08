@@ -84,7 +84,7 @@ export default function CalculatorForm({
               onChange("aplicar_horas_extra_legales", false)
             }
           >
-            Cálculo simple
+            Pago simple
           </button>
           <button
             type="button"
@@ -95,7 +95,7 @@ export default function CalculatorForm({
               onChange("aplicar_horas_extra_legales", true)
             }
           >
-            Horas extra legales
+            Pago con horas extra
           </button>
         </div>
       </div>

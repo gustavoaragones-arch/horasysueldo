@@ -18,11 +18,11 @@ export default function ResultsPanel({ results }) {
 
   return (
     <section className="results-panel" aria-live="polite">
-      <p className="results-panel__eyebrow">Total estimado</p>
+      <p className="results-panel__eyebrow">Esto podrías haber ganado</p>
       <p className="results-panel__total">{formatMoneyLine(sueldo_total)}</p>
       <div className="results-panel__row">
         <div className="results-panel__stat">
-          <span className="results-panel__stat-label">Horas trabajadas</span>
+          <span className="results-panel__stat-label">Horas registradas</span>
           <span className="results-panel__stat-value">
             {formatHours(total_hours)}
           </span>
@@ -34,6 +34,9 @@ export default function ResultsPanel({ results }) {
           </span>
         </div>
       </div>
+      <p className="results-panel__helper">
+        Las horas extra se estiman automáticamente según el modo seleccionado.
+      </p>
       <p className="results-panel__disclaimer">
         Estimación informativa para trabajadores en México
       </p>

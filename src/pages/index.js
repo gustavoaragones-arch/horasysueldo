@@ -44,7 +44,11 @@ export default function Home() {
         faqItems={SEO_FAQ}
       />
       <main className="shell">
-        <CalculatorHero />
+        <CalculatorHero
+          title="Descubre cuánto debiste ganar"
+          subtitle="Calcula tus horas, estima tu sueldo y verifica si el pago parece correcto."
+          note="Útil para trabajos por hora, turnos variables y pagos semanales."
+        />
         <CalculatorSection />
         <section className="section-gap">
           <SeoContentBlock

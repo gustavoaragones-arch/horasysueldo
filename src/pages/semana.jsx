@@ -92,9 +92,9 @@ export default function SemanaPage() {
       />
       <main className="shell">
         <section className="section-gap">
-          <h1>Calcula cuánto ganaste esta semana</h1>
+          <h1>Descubre cuánto debiste ganar esta semana</h1>
           <p className="hero-lead">
-            Registra tus horarios y descubre cuánto debiste ganar.
+            Registra tus turnos y estima tu pago semanal en minutos.
           </p>
         </section>
 
@@ -131,7 +131,7 @@ export default function SemanaPage() {
                   className="segment-btn"
                   onClick={() => setAplicarHorasExtraLegales(false)}
                 >
-                  Cálculo simple
+                  Pago simple
                 </button>
                 <button
                   type="button"
@@ -140,7 +140,7 @@ export default function SemanaPage() {
                   className="segment-btn"
                   onClick={() => setAplicarHorasExtraLegales(true)}
                 >
-                  Horas extra legales
+                  Pago con horas extra
                 </button>
               </div>
             </div>

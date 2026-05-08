@@ -173,6 +173,13 @@ a:hover {
   max-width: 38rem;
 }
 
+.hero-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* CTA (home) */
 .btn-cta {
   display: flex;
@@ -343,6 +350,20 @@ input[type="time"].form-input {
   margin: 20px 0 0;
   padding-top: 16px;
   border-top: 1px solid var(--card-border);
+}
+
+.results-panel__helper {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.calculator-trust-note {
+  margin: 14px 6px 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted);
 }
 
 /* SEO block prose (strings unchanged — presentation only) */
