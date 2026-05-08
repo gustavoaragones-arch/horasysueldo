@@ -1,4 +1,5 @@
 import SeoHead from "@/components/SeoHead";
+import CalculatorHero from "@/components/CalculatorHero";
 import CalculatorSection from "@/components/CalculatorSection";
 import SeoContentBlock from "@/components/SeoContentBlock";
 
@@ -9,25 +10,6 @@ const PAGE_TITLE =
   "Calculadora de Horas Trabajadas en México | Horas y Sueldo";
 const PAGE_DESCRIPTION =
   "Calcula horas trabajadas, horas extra y sueldo total en México de forma rápida y sencilla.";
-
-const mainStyle = {
-  width: "100%",
-  maxWidth: "28rem",
-  margin: "0 auto",
-  padding: "1.25rem 1rem 2rem",
-  minHeight: "100vh",
-};
-
-const sectionStyle = {
-  marginBottom: "1.75rem",
-};
-
-const heroTitleStyle = {
-  fontSize: "1.35rem",
-  fontWeight: 700,
-  lineHeight: 1.25,
-  marginBottom: "0.5rem",
-};
 
 const SEO_PARAGRAPHS = [
   "Calcula tus horas trabajadas y descubre cuánto ganaste según tu pago por hora en México.",
@@ -65,18 +47,10 @@ export default function CalculadoraHorasTrabajadasPage() {
         faqItems={SEO_FAQ}
       />
 
-      <main style={mainStyle}>
-        <section style={sectionStyle}>
-          <h1 style={heroTitleStyle}>
-            Calcula tus horas trabajadas y cuánto ganaste
-          </h1>
-        </section>
-
-        <section style={sectionStyle}>
-          <CalculatorSection />
-        </section>
-
-        <section style={{ ...sectionStyle, marginBottom: 0 }}>
+      <main className="shell">
+        <CalculatorHero />
+        <CalculatorSection />
+        <section className="section-gap">
           <SeoContentBlock
             title="Calculadora de horas trabajadas en México"
             paragraphs={SEO_PARAGRAPHS}

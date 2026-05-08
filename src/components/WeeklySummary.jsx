@@ -12,26 +12,29 @@ function formatMoneyLine(n) {
   return `$${nStr} MXN`;
 }
 
-export default function ResultsPanel({ results }) {
-  const { total_hours, overtime_2x, overtime_3x, sueldo_total } = results;
-  const horasExtra = overtime_2x + overtime_3x;
+export default function WeeklySummary({ summary }) {
+  const horasExtra = summary.overtime_2x + summary.overtime_3x;
 
   return (
     <section className="results-panel" aria-live="polite">
-      <p className="results-panel__eyebrow">Total estimado</p>
-      <p className="results-panel__total">{formatMoneyLine(sueldo_total)}</p>
+      <p className="results-panel__eyebrow">Total semanal estimado</p>
+      <p className="results-panel__total">{formatMoneyLine(summary.total_pay)}</p>
       <div className="results-panel__row">
         <div className="results-panel__stat">
           <span className="results-panel__stat-label">Horas trabajadas</span>
           <span className="results-panel__stat-value">
-            {formatHours(total_hours)}
+            {formatHours(summary.total_hours)}
           </span>
         </div>
-        <div className="results-panel__stat" style={{ textAlign: "right" }}>
+        <div className="results-panel__stat" style={{ textAlign: "center" }}>
           <span className="results-panel__stat-label">Horas extra</span>
           <span className="results-panel__stat-value">
             {formatHours(horasExtra)}
           </span>
+        </div>
+        <div className="results-panel__stat" style={{ textAlign: "right" }}>
+          <span className="results-panel__stat-label">Días trabajados</span>
+          <span className="results-panel__stat-value">{summary.worked_days}</span>
         </div>
       </div>
       <p className="results-panel__disclaimer">

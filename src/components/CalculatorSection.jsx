@@ -49,19 +49,19 @@ export default function CalculatorSection() {
   ]);
 
   return (
-    <section
-      style={{ width: "100%" }}
-      aria-label="Calculadora de horas y sueldo"
-    >
-      <CalculatorForm
-        hora_entrada={hora_entrada}
-        hora_salida={hora_salida}
-        descanso_minutos={descanso_minutos}
-        pago_por_hora={pago_por_hora}
-        aplicar_horas_extra_legales={aplicar_horas_extra_legales}
-        onChange={handleChange}
-      />
-      <ResultsPanel results={results} />
+    <section className="section-gap" aria-label="Calculadora de horas y sueldo">
+      <div className="card">
+        <CalculatorForm
+          hora_entrada={hora_entrada}
+          hora_salida={hora_salida}
+          descanso_minutos={descanso_minutos}
+          pago_por_hora={pago_por_hora}
+          aplicar_horas_extra_legales={aplicar_horas_extra_legales}
+          onChange={handleChange}
+        />
+        <div className="calculator-divider" />
+        <ResultsPanel results={results} />
+      </div>
     </section>
   );
 }

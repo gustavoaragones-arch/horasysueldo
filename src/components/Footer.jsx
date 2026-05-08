@@ -1,37 +1,25 @@
 import Link from "next/link";
 
-const footerStyle = {
-  textAlign: "center",
-  padding: "1.5rem 1rem 2rem",
-  fontSize: "0.8rem",
-  lineHeight: 1.6,
-  color: "var(--foreground)",
-  opacity: 0.85,
-};
-
-const linkStyle = {
-  color: "inherit",
-  textDecoration: "underline",
-  textUnderlineOffset: "2px",
-};
-
-const sep = " · ";
+const sep = (
+  <>
+    {" "}
+    <span aria-hidden>·</span>{" "}
+  </>
+);
 
 export default function Footer() {
   return (
-    <footer style={footerStyle}>
-      <nav aria-label="Enlaces legales">
-        <Link href="/privacy" style={linkStyle}>
-          Privacidad
-        </Link>
+    <footer className="footer-app">
+      <nav className="footer-app__nav" aria-label="Enlaces legales">
+        <Link href="/privacy">Privacidad</Link>
         {sep}
-        <Link href="/terms" style={linkStyle}>
-          Términos
-        </Link>
+        <Link href="/terms">Términos</Link>
         {sep}
-        <Link href="/disclaimer" style={linkStyle}>
-          Descargo de responsabilidad
-        </Link>
+        <Link href="/disclaimer">Descargo</Link>
+        {sep}
+        <Link href="/cookies">Cookies</Link>
+        {sep}
+        <Link href="/responsible-ai">IA responsable</Link>
       </nav>
     </footer>
   );
