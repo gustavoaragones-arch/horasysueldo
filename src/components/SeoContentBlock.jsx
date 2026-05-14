@@ -5,19 +5,23 @@ export default function SeoContentBlock({
 }) {
   return (
     <article className="seo-block">
-      <h2>{title}</h2>
-      {paragraphs.map((text, index) => (
-        <p key={index}>{text}</p>
-      ))}
-      <h3 className="seo-block__faq-heading">Preguntas frecuentes</h3>
-      <dl>
-        {faqItems.map((item, index) => (
-          <div key={index}>
-            <dt>{item.question}</dt>
-            <dd>{item.answer}</dd>
-          </div>
+      <div className="seo-block__intro">
+        <h2>{title}</h2>
+        {paragraphs.map((text, index) => (
+          <p key={index}>{text}</p>
         ))}
-      </dl>
+      </div>
+      <div className="seo-block__faq">
+        <h3 className="seo-block__faq-heading">Preguntas frecuentes</h3>
+        <dl>
+          {faqItems.map((item, index) => (
+            <div key={index} className="seo-block__faq-item">
+              <dt>{item.question}</dt>
+              <dd>{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </article>
   );
 }
